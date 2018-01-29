@@ -1,0 +1,16 @@
+
+
+.region:hover{
+    stroke: #fff;
+    stroke-width: 7.5px;
+    cursor:pointer;
+
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+

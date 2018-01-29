@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>TNM048, Projekt</title>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap core CSS -->
+        <!-- Modules CSS -->
+        <link rel="stylesheet" href="css/barchart1.css">
+        <link rel="stylesheet" href="css/barchart2.css">
+        <link rel="stylesheet" href="css/map.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/colorbrewer.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+<body>
+
+    <!-- Title -->
+    <div id="title" style="width: 100%"> 
+            <h1 id="text" 
+                style="text-align:center;
+                       font: 50px sans-serif;">
+                Blockfördelning per kommun (Riksdagsvalet, 2014)
+            </h1>
+    </div>
+
+    <!-- Search bar -->
+    <div class="search" 
+         style="
+                text-align: center;
+                font: 25px sans-serif;
+                margin-bottom :15px;
+               ">
+
+            <!-- The search bar. Allows pressing enter to call the onclick function for the button-->
+            <input type="text" 
+                   id="searchbar" 
+                   placeholder="Kommun..." 
+                   onkeydown = "if (event.keyCode == 13)
+                                    document.getElementById('btnSearch').click()"
+            >
+
+            <!-- The search button.-->
+            <input type="button" id = "btnSearch" value="Sök" onclick="selectComponents()"/>
+    </div>
+
+     <!-- ROW 1 -->
+    <div class="row" >
+        
+        <!-- Map -->
+        <div class="col-md-4" id="map" 
+             style= "
+                     border:2px solid white; 
+                     background-color: #F0F0F0; 
+                     height: 90vh; width: 35vw; 
+                     margin-left: 40px;
+                     border-radius: 10px;
+                    ">
+           <!-- <div class="well">STAD HÄR</div> -->
+        </div>
+
+        <!-- Empty space between the map and the barcharts.-->
+        <div class="col-md-1" </div>
+
+        <!-- Barcharts -->
+        <div class="col-md-7" 
+             style="
+                    border:2px solid white; 
+                    background-color: #F0F0F0; 
+                    height: 90vh; width: 60vw;
+                    margin-right: 40px;
+                    border-radius: 10px
+                   ">
+
+            <!-- Barchart 2 -->
+            <div id="bar2" style="height: 45vh; width: 55vw;" >
+                
+            </div> 
+
+
+            <!-- Barchart 2 -->        
+            <div id="bar1" style="height: 45vh; width: 55vw;">
+                <!-- <div class="well">PARTIER (%) </div> -->
+            </div> 
+                  
+        </div>
+    </div>
+
+    <!-- Jquery, Bootstrap, d3. -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>    
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="js/vendor/d3.min.js"></script>
+    <script src="js/vendor/topojson.v1.min.js"></script>
+    <script src="js/vendor/underscore-min.js"></script>
+    <script src="js/vendor/colorbrewer.js"></script>
+
+
+    <!-- Modules -->
+    <script src="js/vendor/d3.v3.min.js"></script>
+    <script src="js/barchart1.js"></script>
+    <script src="js/barchart2.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+
+</html>
